@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/images/Logo.png">
+    <meta name='twitter:card' content='summary' />
+    <meta name='twitter:title' content='רובלוקס סטודיו ישראל' />
+    <meta name='twitter:description' content='האתר הרשמי של רובלוקס סטודיו ישראל' />
+    <title>כניסה</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+            padding: 40px;
+            width: 400px;
+            max-width: 90%;
+        }
+
+        #login-container h1 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        #login-button {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 15px 0;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #login-button:hover {
+            background-color: #0056b3;
+        }
+
+        #login-form-footer {
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        #login-form-footer a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        #login-form-footer a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h1>כניסת צוות</h1>
+        <form method="post" action="/stafflogin">
+            <div class="form-group">
+                <label for="username">שם משתמש</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">סיסמה</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button id="login-button" type="submit">כניסה</button>
+        </form>
+        <div id="login-form-footer">
+            <p>רוצה לחזור לדף הראשי? <a href="/">לחץ פה </a>כדי לחזור לדף הראשי </p>
+        </div>
+    </div>
+</body>
+</html>

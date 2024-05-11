@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="static/css/Main.css">
+{% endblock head %}
+
+
+
+{% block content %}
+<script type="text/javascript">
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/|i.test(navigator.userAgent)){
+        alert("שים לב: מומלץ להשתמש באתר דרך המחשב, שימוש באתר דרך הטלפון יכול להפריע לפעילות שלך באתר.");
+    }
+</script>
+<div id="home" class="container" style="background-color: rgb(67, 57, 255); height: auto; size: 100%;">
+    <h1 style="text-align: center; font-size: 3em; color:#ffffff; font-family: 'Rubik'; font-weight: 600; font-style: normal;">אתר ללמידת פיתוח, קבלת עדכונים חשובים, ועוד!</h1>
+    <h1 style="text-align: center; color: #ffffff; font-family: 'Courier New', Courier, monospace; letter-spacing: -0.1em;">על ידי רובלוקס סטודיו ישראל</h1>
+</div>
+<img src="Images/pic1.png" alt="" width="400px" style="float: left; padding-left: 20px; overflow: hidden; position: sticky; z-index: 2;">
+
+<div id="courses" class="container">
+    <h2 style="font-size: 30px; color: rgb(0, 0, 0);">קורסים זמינים (בחינם!)</h2>
+        <div class="course-card">
+            <h3>מבוא לסקריפטים</h3>
+            <p>קורס ידידי ונחמד על הבסיס והמבוא לסקריפטים</p>
+            <a href="intro_to_scripting.html">למד עוד</a>
+        </div>
+        <div class="course-card">
+            <h3>מדריכים - לואה</h3>
+            <p>קח את הרמת ידע שלך ותשפר אותה</p>
+            <a href="lessons">למד עוד</a>
+        </div>
+        <div class="course-card">
+            <h3>דברים נוספים</h3>
+            <p>דברים נוספים שיכולים לעזור לך</p>
+            <a href="#resources">למד עוד</a>
+        </div>
+    </div>
+
+    <div id="resources" class="container">
+        <h1 style="text-align: center; font-size: 50px;"><u>דברים נוספים</u></h1>
+        <h2 style="text-align: center; font-size: 40px;">קישורים חיצוניים</h2>
+        <div class="resources">
+            <div class="resource">
+                <h3>Roblox Developer Hub</h3>
+                <p>האתר הרשמי של רובלוקס סטודיו, עם כל המדריכים וההסברים</p>
+                <a href="https://create.roblox.com/docs/studio" target="_blank">לבקר</a>
+            </div>
+            <div class="resource">
+                <h3>Roblox Developer Forum</h3>
+                <p>פורום של תקשורת ועזרה עם מפתחים אחרים, וגם מקום ללמידה</p>
+                <a href="https://devforum.roblox.com/" target="_blank">לבקר</a>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; font-size: 40px;">כלים לרובלוקס סטודיו</h2>
+        <div class="resources">
+            <div class="resource">
+                <h3>Lua Israel's AI</h3>
+                <p>הבינה המלאכותית החדשה של האתר לעזרה ברובלוקס סטודיו</p>
+                <a href="ai">לעבור לדף</a>
+            </div>
+            <div class="resource">
+                <h3>Lua Israel's Courses</h3>
+                <p>מדריכים ללימוד לואה ורובלוקס סטודיו</p>
+                <a href="lesson.html">לעבור לדף</a>
+            </div>
+        </div>
+
+        <footer style="margin: 0; position: unset; width: auto; height: auto;">
+            <div style="display: flex; justify-content: center;">
+                <div style="margin-right: 10px;">
+                    <ul>
+                        <h4 style="color: #fff; text-align: center; margin-bottom: 5px; font-weight: 300; font-size: 16px;">קישורים חיצוניים</h4>
+                        <hr style="border-top: 1px solid #fff; width: 80%; margin: auto;">
+                        <li><a href="https://devforum.roblox.com/" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">DevForum</a></li>
+                        <li><a href="https://create.roblox.com/docs" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">Creator Hub</a></li>
+                        <li><a href="https://www.roblox.com/home" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">Roblox</a></li>
+                    </ul>
+                </div>
+                <div style="margin-right: 10px;">
+                    <ul>
+                        <h4 style="color: #fff; text-align: center; margin-bottom: 5px; font-weight: 300; font-size: 16px;">קהילות שפיתחו את האתר</h4>
+                        <hr style="border-top: 1px solid #fff; width: 80%; margin: auto;">
+                        <li><a href="https://discord.gg/roblox-studio-il-1098908799340908565" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">Roblox Studio IL</a></li>
+
+                    </ul>
+                </div>
+                <div style="margin-right: 10px;">
+                    <ul>
+                        <h4 style="color: #fff; text-align: center; margin-bottom: 5px; font-weight: 300; font-size: 16px;">דפים</h4>
+                        <hr style="border-top: 1px solid #fff; width: 80%; margin: auto;">
+                        <li><a href="/" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">דף ראשי</a></li>
+                        <li><a href="/lessons" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">מדריכים</a></li>
+                        <li><a href="/ai" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">בינה מלאכותית</a></li>
+                        <li><a href="/updates" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">עדכונים</a></li>
+                    </ul>
+                </div>
+                <div style="margin-right: 10px;">
+                    <ul>
+                        <h4 style="color: #fff; text-align: center; margin-bottom: 5px; font-weight: 300; font-size: 16px;">מדיה חברתית</h4>
+                        <hr style="border-top: 1px solid #fff; width: 80%; margin: auto;">
+                        <li><a href="https://www.youtube.com/channel/UC540EEqnGaYfU05uHBoAFqg" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">יוטיוב</a></li>
+                        <li><a href="https://www.tiktok.com/@robloxstudioil" style="color: #e0e0e0; font-family: Arial, sans-serif; font-weight: 300;">טיקטוק</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: right; margin-top: 20px; margin-right: 20px; font-size: 15px; color: #e0e0e0;">כל הזכויות שמורות @ Roblox Studio IL - 2024</div>
+        </footer>
+        
+    </div>
+{% endblock content %}

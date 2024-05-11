@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <script>
+        console.log('%c אזהרה!', 'color: red; font-size: 24px;');
+        console.log('%c ⚠️ שימוש בפקודות באיזור זה יכול לפגוע בפעילות שלך באתר, מומלץ לא לבצע פקודות באיזור זה!', 'color: blue; font-size: 16px;');
+    </script>
+    <script>
+        console.log = function(){ };
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.enable.co.il/licenses/enable-L25303qlig38mvkz-0324-57417/init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/images/Logo.png">
+    <meta name='twitter:card' content='summary' />
+    <meta name='twitter:title' content='רובלוקס סטודיו ישראל' />
+    <meta name='twitter:description' content='האתר הרשמי של רובלוקס סטודיו ישראל' />
+    <title>{{ title }}</title>
+    {% block head %}
+    {% endblock head %}
+    
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Suez One', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+                .container {
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        nav {
+            position: -webkit-sticky;
+            position: sticky;
+            background-color: #ffffff;
+            color: #fff;
+            top: 0;
+            padding: 1px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        nav ul li a:hover {
+            color: #ffac41;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .resource {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .resource {
+                flex-basis: calc(100% - 20px);
+            }
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <nav>
+        <div class="container" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <ul style="text-align: right; margin-top: 0;">
+                <li style="text-align: right;">
+                    <a href="/" {% if request.path == '/' %} style="background-color: #007bff; border-radius: 5px; padding: 5px; color: #fff;" {% endif %}>דף ראשי</a>
+                </li>
+                <li style="text-align: right;">
+                    <a href="lessons" {% if request.path == '/lessons' %} style="background-color: #007bff; border-radius: 5px; padding: 5px; color: #fff;" {% endif %}>מדריכים</a>
+                </li>
+                <li style="text-align: right;">
+                    <a href="ai" {% if request.path == '/ai' %} style="background-color: #007bff; border-radius: 5px; padding: 5px; color: #fff;" {% endif %}>בינה מלאכותית</a>
+                </li>
+                <li style="text-align: right;">
+                    <a href="credits" {% if request.path == '/credits' %} style="background-color: #007bff; border-radius: 5px; padding: 5px; color: #fff;" {% endif %}>קרדיטים</a>
+                </li>
+                <li style="text-align: right;">
+                    <a href="updates" {% if request.path == '/updates' %} style="background-color: #007bff; border-radius: 5px; padding: 5px; color: #fff;" {% endif %}>עדכונים</a>
+                </li>
+                <li style="text-align: right;">
+                    <a href="support" {% if request.path == '/support' %} style="background-color: #007bff; border-radius: 5px; padding: 5px; color: #fff;" {% endif %}>תמיכה</a>
+                </li>
+                <li style="text-align: right;">
+                    <a href="guides" {% if request.path == '/guides' %} style="background-color: #007bff; border-radius: 5px; padding: 5px; color: #fff;" {% endif %}>בקשת מדריך</a>
+                </li>
+            </ul>
+            <div>
+                <a href="/" style="font-weight: bold; color: black;">Lua Israel</a>
+            </div>
+        </div>
+    </nav>
+
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>

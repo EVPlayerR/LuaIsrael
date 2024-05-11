@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header p {
+            margin: 0;
+            margin-right: 20px; /* כפתור התנתקות מהמשתמש */
+        }
+        .logout-form button {
+            background-color: #FF0000;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .panel {
+            border: 2px solid #008CBA;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .panel h2 {
+            margin-top: 0;
+        }
+        .form-control {
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .submit-button {
+            background-color: #008CBA;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #005f7e;
+        }
+    </style>
+{% endblock head %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <p>מחובר מהמשתמש: {{ username }}</p>
+            <div class="logout-form">
+                <form action="/logout" method="GET">
+                    <button type="submit">התנתק מהמשתמש</button>
+                </form>
+            </div>
+        </div>
+        <div class="panel">
+            <h1>פאנל צוות</h1>
+            <div>
+                <h2>טופס עריכת מדריך</h2>
+                <form action="/submit_request" method="POST">
+                    <input type="hidden" name="username" value="{{ username }}">
+                    <label for="message">מה שתרצה לערוך ולמה:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" class="form-control"></textarea><br>
+                    <label for="issue">מה שערכת:</label><br>
+                    <textarea id="issue" name="issue" rows="4" cols="50" class="form-control"></textarea><br>
+                    <label for="guide">בחר את המדריך שאתה ערכת:</label><br>
+                    <select id="guide" name="guide" class="form-control">
+                        <option value="לולאות">לולאות</option>
+                        <option value="מדריך 2">מדריך 2</option>
+                        <option value="מדריך 3">מדריך 3</option>
+                    </select><br>
+                    <button type="submit" class="submit-button">שליחת בקשה</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

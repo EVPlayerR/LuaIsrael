@@ -1,0 +1,408 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="static/css/LessonPage.css">
+{% endblock head %}
+
+
+
+{% block content %}
+<div class="sidenav" style="background-color: rgb(61, 138, 89);">
+    <a style="border: 1px solid rgb(191, 189, 189); padding: 5px; background-color: rgb(191, 189, 189); color: white;" href="index.html" class="underline">חזרה לדף הראשי</a>
+    <!-- קטגורייה 1 -->
+    <button class="dropdown-btn">מדריכים התחלתיים
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <!-- רשימת קטגורייה 1 -->
+      <a href="#hi1" class="dropdown-link">הדפסה</a>
+      <a href="#hi2" class="dropdown-link">קלט ופלט</a>
+      <a href="#hi3" class="dropdown-link">בוליאנים</a>
+      <a href="#hi4" class="dropdown-link">לולאות</a>
+      <a href="#hi5" class="dropdown-link">הצהרות</a>
+      <a href="#hi6" class="dropdown-link">משתנים</a>
+  
+    </div>
+  
+  
+      <!-- קטגורייה 2 -->
+    <button class="dropdown-btn">מדריכי סטודיו
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+    <!-- רשימת קטגורייה 2 -->
+  
+    </div>
+  
+  
+      <!-- קטגורייה 3 -->
+    <button class="dropdown-btn">מדריכי שרת
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+    <!-- רשימת קטגורייה 3 -->
+    <a href="#hebrewchat" class="dropdown-link">צ'אט עברית</a>
+    <a href="#gamepublic" class="dropdown-link">פרסום משחק</a>
+    <a href="#ai" class="dropdown-link">בינה מלאכותית</a>
+    <a href="#addteams" class="dropdown-link">הוספת טימים</a>
+    <a href="#newpanel" class="dropdown-link">הפאנל החדש</a>
+    </div>
+  
+  
+  
+  
+  
+  
+    <br>
+  </div>
+  
+  
+  
+  
+  <!-- התחלת ראשי -->
+  <div class="main">
+  
+  
+      <!-- Lesson 1 -->
+    <div id="hi1" style="display: block;">
+      <h2>הדפסה</h2>
+      <h4>הקדמה:</h4>
+        <p>
+          פרינט זו פקודה המדפיסה מה שרשום בתוכה. בשביל להשתמש בפרינט נצטרך לרשום את הקוד הבא:
+          <section class="lua">
+            <p><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"Hello World"</span>)</p>
+          </section>
+          <h4>תוצאה:</h4>
+          <section class="lua">
+              <span style="color: crgb(137, 137, 137)">Hello World</span>
+          </section>
+          <br>
+          כלומר, שזה ידפיס את הערך או הטקסט שבתוך הסוגריים.
+          <h4>למה זה יעיל?</h4>
+          הפקודה print משמשת
+  להדפסת טקסט או ערך.
+          </br>
+  זה כלי יעיל לאיתור בעיות בקוד ולהבנת תהליכי הרצה. כלומר, כשיש בעיה, הפלט(התגובה) שנוצר
+  
+        </p>
+        <button class="button1" onclick="nextLesson('hi2')">שיעור הבא</button>
+    </div>
+  
+      <!-- Lesson 2 -->
+    <div id="hi2" style="display: none;">
+      <h2>קלט / פלט</h2>
+        <p>
+          <h4>הקדמה:</h4>
+          האווטפוט (Output) זה הפלט. הכוונה היא התוצאה של הקוד, לכל קוד יש Input ויש גם Output.
+  הInput הוא הקלט (הקוד עצמו)
+          <h4>דוגמה לInput:</h4>
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">Input --</span></br>          <p><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"Hello World"</span>)</p>
+          </section>
+          <h4>והתוצאה היא הOutput:</h4>
+          <section class="lua">
+              <span style="color: rgb(0, 137, 52);">Output --</span></br><span style="color: crgb(137, 137, 137)">Hello World</span>
+          </section>
+          <br>
+        </p>
+        <button class="button1" onclick="prevLesson('hi1')">שיעור קודם</button>
+        <button class="button1" onclick="nextLesson('hi3')">שיעור הבא</button>
+    </div>
+  
+      <!-- Lesson 3 -->
+    <div id="hi3" style="display: none;">
+      <h2>בוליאנים</h2>
+        <p>
+          <h4>הקדמה:</h4>
+          בוליאנים (booleans) הם נכון או לא נכון (True / False)
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">דוגמה --</span></br>          <p>script.Parent.Enabled = <span style="color: rgb(136, 207, 255);">True</span></p>
+          </section>
+          כלומר, שזה יעשה את מה שנמצא בscript.parent מופעל.
+          <h4>למה זה יעיל?</h4>
+          בכדי להגדיר ערכים / משתנים כTrue או False, ולכבות או להפעיל דברים, לעשות שכאשר משהו לא נכון אז יקרה משהו, וכו...
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">נכון או לא נכון --</span></br>          <p><span style="color: rgb(95, 184, 0);">True</span> = נכון </br><span style="color: rgb(255, 0, 0);">False</span> = לא נכון</p>
+          </section>
+          <br>
+        </p>
+        <button class="button1" onclick="prevLesson('hi2')">שיעור קודם</button>
+        <button class="button1" onclick="nextLesson('hi4')">שיעור הבא</button>
+    </div>
+  
+    <!-- Lesson 4 -->
+    <div id="hi4" style="display: none;">
+      <h2>לולאות</h2>
+        <p>
+          <h4>הקדמה:</h4>
+          ישנם כמה סוגים של לולאות, לולאה גורמת לשורת קוד או לתוכנית שלמה לחזור על עצמה מספר פעמים, יכול להיות שהלולאה תימשך לנצח ויכול להיות שהיא תעצר בשלב מסויים.
+          <section class="lua">
+            <p><span style="color: rgb(188, 59, 59);">while</span><span style="color: rgb(136, 207, 255);"> true</span><span style="color: rgb(188, 59, 59);"> do</span></br><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"Hello World"</span>)</br><span style="color: rgb(188, 59, 59);">end</span></p>
+          </section>
+          קוד זה ידפיס "Hello World" לנצח ללא הפסקה, ניתן לגרום להפסקה של מספר שניות בלולאה בצורה הבאה:
+          <section class="lua">
+            <p><span style="color: rgb(188, 59, 59);">while</span> wait(<span style="color: rgb(136, 207, 255);">5</span>)<span style="color: rgb(188, 59, 59);"> do</span></br><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"Hello World"</span>)</br><span style="color: rgb(188, 59, 59);">end</span></p>
+          </section>
+          וגם ניתן ליצור לולאה שתמשיך עד פעולה מסויימת:
+          <section class="lua">
+            <p><span style="color: rgb(188, 59, 59);">local</span> a = <span style="color: rgb(136, 207, 255);">1</span></br></br><span style="color: rgb(188, 59, 59);">repeat</span></br>wait(<span style="color: rgb(136, 207, 255);">0.1</span>)</br>a = a + <span style="color: rgb(136, 207, 255);">1</span></br><span style="color: rgb(188, 59, 59);">until</span> a == <span style="color: rgb(136, 207, 255);">5</span></p>
+          </section>
+          בדוגמה זו הגדרנו שa שווה 1, ויצרנו לולאה שכל 0.1 שניות זה יעלה את a באחד, וזה יעצור את הלולאה כאשר a יהיה שווה 5.
+          <h4>למה זה יעיל?</h4>
+          לולאה משמשת לחזרה על קוד שוב ושוב, או עד פעולה מסויימת. עם זה אפשר ליצור כל מיני דברים, לדוגמה: סקריפט שכל מספר שניות מביא מספר כסף מסויים לשחקן.
+          <br>
+        </p>
+        <button class="button1" onclick="prevLesson('hi3')">שיעור קודם</button>
+        <button class="button1" onclick="nextLesson('hi5')">שיעור הבא</button>
+    </div>
+  
+    <!-- Lesson 5 -->
+    <div id="hi5" style="display: none;">
+      <h2>הצהרות</h2>
+        <p>
+          <h4>הקדמה:</h4>
+         הצהרות הן מה יקרה אם, או אחרת. זאת אומרת להפעיל פעולה מסויימת אם קורה משהו מסויים, אם תנאי מתקיים.</br>יש כמה סוגי הצהרות:
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">if --</span></br>a = <span style="color: rgb(136, 207, 255);">5</span></br><span style="color: rgb(188, 59, 59);">if</span> a == <span style="color: rgb(136, 207, 255);">5</span><span style="color: rgb(188, 59, 59);"> then</span></br><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"True"</span>)</p>
+          </section>
+          בעזרת else ניתן לבצע פעולה ב"כל מקרה אחר" אם התנאי לא מתקיים:
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">else --</span></br>a = <span style="color: rgb(136, 207, 255);">4</span></br><span style="color: rgb(188, 59, 59);">if</span> a == <span style="color: rgb(136, 207, 255);">5</span><span style="color: rgb(188, 59, 59);"> then</span></br><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"True"</span>)</br><span style="color: rgb(188, 59, 59);">else</span></br><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"False"</span>)</br><span style="color: rgb(188, 59, 59);">end</span></p>
+          </section>
+          וגם ניתן לבצע בדיקה של תנאי חדש במידה והתנאי הקודם לא מתקיים:
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">elseif --</span></br>a = <span style="color: rgb(136, 207, 255);">5</span></br><span style="color: rgb(188, 59, 59);">if</span> a == <span style="color: rgb(136, 207, 255);">2</span><span style="color: rgb(188, 59, 59);"> then</span></br><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"a = 2"</span>)</br><span style="color: rgb(188, 59, 59);">elseif</span> a == 5<span style="color: rgb(188, 59, 59);"> then</span></br><span style="color: rgb(255, 170, 0);">print</span>(<span style="color: rgb(136, 207, 255);">"a = 5"</span>)</br><span style="color: rgb(188, 59, 59);">end</span></p>
+          </section>
+          <h4>למה זה יעיל?</h4>
+          ניתן להשתמש בהצהרות אם אנחנו רוצים לבצע פעולה מסויימת אם תנאי מסויים מתקיים, או אם הוא לא מתקיים.
+          <br>
+        </p>
+        <button class="button1" onclick="prevLesson('hi4')">שיעור קודם</button>
+        <button class="button1" onclick="nextLesson('hi6')">שיעור הבא</button>
+    </div>
+  
+  
+    <!-- Lesson 6 -->
+    <div id="hi6" style="display: none;">
+      <h2>משתנים</h2>
+        <p>
+          <h4>הקדמה:</h4>
+          משתנים הם כלי חשוב בתכנות ברובלוקס סטודיו, שיעזרו לך לארגן ולשדרג את הקוד שלך. במדריך הזה, נלמד כיצד להשתמש במשתנים וליצור אותם בצורה יעילה. </br></br>
+          השימוש במשנים:
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">הגדרת משתנה --</span></br>a = <span style="color: rgb(136, 207, 255);">"Hello"</span></br></br><span style="color: rgb(0, 137, 52);">הדפסת השתנה --</span><span style="color: rgb(255, 170, 0);">print</span>(a)</p>
+          </section>
+          בדוגמה הזו, המשתנה a הוגדר כ־"Hello", ואז נדפיס אותו. התוצאה תהיה "Hello". מטרת המשתנים היא להקל עליך ולהפוך את הקוד לקריא ומובן יותר.
+          <h4>יצירת משתנים:</h4>
+          <section class="lua">
+            <p><span style="color: rgb(0, 137, 52);">יצירת משתנה חדש --</span></br>a = <span style="color: rgb(136, 207, 255);">"World"</span></p>
+          </section>
+  
+          <h4>למה זה יעיל?</h4>
+          משתנים יעילים על מנת לקצר את הזמן, במקום לכתוב הרבה, להגדיר משתנה קצר.
+          <br>
+        </p>
+        <button class="button1" onclick="prevLesson('hi5')">שיעור קודם</button>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <!-- Hebrew Chat -->
+      <div id="hebrewchat" style="display: none;">
+        <h2>צ'אט עברית</h2>
+          <p>
+            <h4>הקדמה:</h4>
+           צ'אט עברית מאפשר לשחקנים במשחק שלך לדבר חופשי בשפה העברית, הצ'אט שלנו מאפשר זאת. </br>
+           <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OIX9z_9JkGU" frameborder="0" allowfullscreen></iframe>
+          </div>
+            <h4>איך להוריד את הקובץ?</h4>
+            בשביל להוריד את הקובץ של הצ'אט עברית אתה יכול להכנס לשרת הדיסקורד שלנו או ללחוץ על הכפתור למטה. </br>
+            <a class="downloadbutton" href="Files/HebrewChat.rbxm" download>לחץ כאן להורדת הקובץ</a>
+            <br>
+          </p>
+          <button class="button1" onclick="prevLesson('hi4')">שיעור קודם</button>
+          <button class="button1" onclick="nextLesson('gamepublic')">שיעור הבא</button>
+      </div>
+  
+      <!-- Game Public -->
+      <div id="gamepublic" style="display: none;">
+        <h2>פרסום משחק</h2>
+          <p>
+            <h4>הקדמה:</h4>
+           כאן תלמדו כיצד להוציא את המשחק שלכם, כלומר, שעוד שחקנים יוכלו לשחק בו. </br>
+           <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L9ZPKwv9rXY" frameborder="0" allowfullscreen></iframe>
+          </div>
+            <br>
+          </p>
+          <button class="button1" onclick="prevLesson('hebrewchat')">שיעור קודם</button>
+          <button class="button1" onclick="nextLesson('ai')">שיעור הבא</button>
+      </div>
+
+      <!-- AI -->
+      <div id="ai" style="display: none;">
+        <h2>בינה מלאכותית</h2>
+          <p>
+            <h4>הקדמה:</h4>
+            הבינה המלאכותית של רובלוקס סטודיו מאפשרת לך לקבל עזרה בקודים בתוך רובלוקס סטודיו. </br>
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uewlOkuae6o?t=7s" frameborder="0" allowfullscreen></iframe>
+          </div>
+            <br>
+          </p>
+          <button class="button1" onclick="prevLesson('gamepublic')">שיעור קודם</button>
+          <button class="button1" onclick="nextLesson('addteams')">שיעור הבא</button>
+      </div>
+
+
+      <!-- Add Teams -->
+      <div id="addteams" style="display: none;">
+        <h2>הוספת טימים</h2>
+          <p>
+            <h4>הקדמה:</h4>
+            טימים הם הקבוצות במשחק שלך, שבעזרתם אתה יכול ליצור משחק תפקידים. </br>
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RkXUjmbeqXo" frameborder="0" allowfullscreen></iframe>
+          </div>
+            <br>
+          </p>
+          <button class="button1" onclick="prevLesson('ai')">שיעור קודם</button>
+          <button class="button1" onclick="nextLesson('newpanel')">שיעור הבא</button>
+      </div>
+
+      <!-- New Panel -->
+      <div id="newpanel" style="display: none;">
+        <h2>הפאנל החדש</h2>
+          <p>
+            <h4>הקדמה:</h4>
+            הפאנל החדש הוא פאנל חדש שרובלוקס הוציאו במצב בטא, עם עיצוב חדש. </br>
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/k6eOQxWfK6E" frameborder="0" allowfullscreen></iframe>
+          </div>
+            <br>
+          </p>
+          <button class="button1" onclick="prevLesson('addteams')">שיעור קודם</button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div> <!-- סוגר ראשי -->
+  
+  
+  
+  <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+  var dropdownLinks = document.getElementsByClassName("dropdown-link");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.maxHeight) {
+        dropdownContent.style.maxHeight = null;
+      } else {
+        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+      }
+    });
+  }
+  
+  var dropdownLinks = document.querySelectorAll('.dropdown-container .dropdown-link');
+  for (i = 0; i < dropdownLinks.length; i++) {
+    dropdownLinks[i].addEventListener("click", function(event) {
+      event.preventDefault();
+      var contentId = this.getAttribute("href").substring(1);
+      var content = document.getElementById(contentId);
+      var allContent = document.querySelectorAll('.main > div');
+      allContent.forEach(function(item) {
+        item.style.display = "none";
+      });
+      content.style.display = "block";
+      content.scrollIntoView();
+    });
+  }
+  
+  function toggleContent(contentId) {
+    var content = document.getElementById(contentId);
+    var allContent = document.querySelectorAll('.main > div');
+    allContent.forEach(function(item) {
+        item.style.display = 'none';
+    });
+    content.style.display = 'block';
+  }
+  
+  function nextLesson(nextLessonId) {
+    toggleContent(nextLessonId);
+  }
+  
+  function prevLesson(prevLessonId) {
+    toggleContent(prevLessonId);
+  }
+  
+  var dropdownLinks = document.querySelectorAll('.dropdown-container .dropdown-link');
+  var prevSelectedLink = null;
+  
+  for (var i = 0; i < dropdownLinks.length; i++) {
+    dropdownLinks[i].addEventListener("click", function(event) {
+      event.preventDefault();
+      var contentId = this.getAttribute("href").substring(1);
+      var content = document.getElementById(contentId);
+      var allContent = document.querySelectorAll('.main > div');
+      allContent.forEach(function(item) {
+        item.style.display = "none";
+      });
+      content.style.display = "block";
+      content.scrollIntoView();
+      
+      if (prevSelectedLink) {
+        prevSelectedLink.style.fontWeight = '200';
+      }
+      
+      this.style.fontWeight = '800';
+      prevSelectedLink = this;
+    });
+  }
+  </script>
+{% endblock content %}
