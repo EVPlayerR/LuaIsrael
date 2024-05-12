@@ -8,23 +8,75 @@
 {% block content %}
     <style>
         body {
-            background-color: #212121;
+            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container {
+            margin: 50px auto;
+            width: 50%;
+            padding: 30px;
+            border: 2px solid #444;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #444;
+            text-align: center;
+        }
+        label {
+            color: #666;
+            font-weight: bold;
+        }
+        textarea, select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #888;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #444;
+            resize: none;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 20px auto 0;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1);
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 20px;
         }
     </style>
-    <div style="position: relative; top: 100px; text-align: center;">
-        <h1 style="color: #FFFFFF;">טופס בקשת מדריך</h1>
-        <div style="border: 2px solid #FFFFFF; border-radius: 10px; padding: 20px; width: 50%; margin: 0 auto; background-color: #696969;">
-            <h2 style="color: #FFFFFF;">אילו מדריכים תרצה לראות אצלנו?</h2>
+    <div class="form-container">
+        <h1>טופס בקשת מדריך</h1>
+        <div>
+            <h2>אילו מדריכים תרצה לראות אצלנו?</h2>
             <form action="/guide_request" method="POST">
-                <label for="message" style="margin-bottom: 10px; color: #FFFFFF;">ספר לנו על המדריך שתרצה שניצור:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" style="border-radius: 10px; background-color: #212121; color: #FFFFFF;"></textarea><br><br>
-                <label for="guide" style="margin-bottom: 10px; color: #FFFFFF;">איזה סוג של מדריך תרצה?</label><br>
-                <select id="guide" name="guide" style="border-radius: 10px; background-color: #212121; color: #FFFFFF;">
-                    <option value="סרטון">סרטון</option>
-                    <option value="סקריפט יומי">סקריפט יומי</option>
-                    <option value="מודל יומי">מודל יומי</option>
-                </select><br><br>
-                <button type="submit" style="background-color: #212121; border: none; color: #FFFFFF; padding: 10px 20px; border-radius: 10px; cursor: pointer; transition: background-color 0.3s ease;">שליחת בקשה</button>
+                <div class="form-group">
+                    <label for="message">ספר לנו על המדריך שתרצה שניצור:</label><br>
+                    <textarea id="message" name="message" rows="4" placeholder="כתוב כאן..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="guide">איזה סוג של מדריך תרצה?</label><br>
+                    <select id="guide" name="guide" required>
+                        <option value="סרטון">סרטון</option>
+                        <option value="סקריפט יומי">סקריפט יומי</option>
+                        <option value="מודל יומי">מודל יומי</option>
+                    </select>
+                </div>
+                <button type="submit">שליחת בקשה</button>
             </form>
         </div>
     </div>
