@@ -26,6 +26,7 @@ users = {
     "Selector": "SelectorPassOr",
     "EVPlayer": "EV12345",
     "NoVa": "TheGodness1857",
+    "Atzrubal": "AtzrubalPass600",
 }
 
 @app.route('/stafflogin', methods=['GET', 'POST'])
