@@ -2,9 +2,8 @@
 
 {% block head %}
     <link rel="stylesheet" type="text/css" href="static/css/AIPage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% endblock head %}
-
-
 
 {% block content %}
 <style>
@@ -21,10 +20,10 @@
             background-image: linear-gradient(45deg, #ffd700, #ffd53b, #ffd26c, #ffc46c, #ffc04d, #ffc03a, #cca300);
         }
         #soon-page{
-            position: absolute;
+            position: relative;
             top: 20%;
-            left: 15%;
-            right: 15%;
+            left: 0;
+            right: 0;
             bottom: 10%;
             display: flex;
             align-items: center;
@@ -32,15 +31,29 @@
             background: #fff;
             box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
             border-radius: 5px;
+            @media screen and (max-width: 768px) {
+                position: relative;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 10%;
+                padding: 0 10px;
+            }
         }
         #soon-page .content{
             max-width: 600px;
             text-align: center;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
         }
         .content h2.header{
-            font-size: 18vw;
+            font-size: 8em;
             line-height: 1em;
             position: relative;
+            @media screen and (max-width: 768px) {
+                font-size: 5em;
+            }
         }
         .content h2.header:after{
             position: absolute;
@@ -54,6 +67,9 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 1px 1px 2px rgba(255,255,255,0.25);
             animation: animate 10s ease-in-out infinite;
+            @media screen and (max-width: 768px) {
+                font-size: 4em;
+            }
         }
         @keyframes animate {
             0% {
@@ -71,6 +87,9 @@
             font-size: 2em;
             max-width: 600px;
             position: relative;
+            @media screen and (max-width: 768px) {
+                font-size: 1.2em;
+            }
         }
         .content h4:after{
             position: absolute;
@@ -82,14 +101,24 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            @media screen and (max-width: 768px) {
+                font-size: 1em;
+            }
         }
         .content p{
             font-size: 1.2em;
             color: #0d0d0d;
+            @media screen and (max-width: 768px) {
+                font-size: 1em;
+            }
         }
         .content .btns{
             margin: 25px 0;
             display: inline-flex;
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         .content .btns a{
             display: inline-block;
@@ -102,6 +131,10 @@
             border-radius: 25px;
             text-transform: uppercase;
             transition: all 0.3s ease;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin: 10px;
+            }
         }
         .content .btns a:hover{
             background: #69a6ce;
