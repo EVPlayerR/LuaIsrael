@@ -63,6 +63,56 @@
         .submit-button:hover {
             background-color: #005f7e;
         }
+
+
+
+        .form-container {
+            margin: 50px auto;
+            width: 50%;
+            padding: 30px;
+            border: 2px solid #444;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #444;
+            text-align: center;
+        }
+        label {
+            color: #666;
+            font-weight: bold;
+        }
+        textarea, select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #888;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #444;
+            resize: none;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 20px auto 0;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1);
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
     </style>
 {% endblock head %}
 
@@ -88,13 +138,26 @@
                     <textarea id="issue" name="issue" rows="4" cols="50" class="form-control"></textarea><br>
                     <label for="guide">בחר את המדריך שאתה ערכת:</label><br>
                     <select id="guide" name="guide" class="form-control">
+                        <option value="לולאות">הדפסה</option>
+                        <option value="קלט ופלט">קלט ופלט</option>
+                        <option value="בוליאנים">בוליאנים</option>
                         <option value="לולאות">לולאות</option>
-                        <option value="מדריך 2">מדריך 2</option>
-                        <option value="מדריך 3">מדריך 3</option>
+                        <option value="הצהרות">הצהרות</option>
+                        <option value="משתנים">משתנים</option>
                     </select><br>
                     <button type="submit" class="submit-button">שליחת בקשה</button>
                 </form>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    
 {% endblock content %}
