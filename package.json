@@ -1,0 +1,19 @@
+{
+  "name": "evebevveflask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.py",
+  "scripts": {
+    "test": "gunicorn app:app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EVPlayerR/luaisrael.git#readme"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EVPlayerR/luaisrael/issues"
+  },
+  "homepage": "https://github.com/EVPlayerR/luaisrael/tree/readme#readme"
+}
